@@ -6,7 +6,7 @@ from scipy import interpolate
 xPoints = [0, 1, 2, 3, 4, 5]
 yPoints = [12, 14, 22, 39, 58, 77]
 tck = interpolate.splrep(xPoints, yPoints, s=0)
-xnew = [0, 1, 2, 3, 4, 5]
+xnew = np.arange(0, 2*np.pi, np.pi/50)
 ynew = interpolate.splev(xnew, tck, der = 0)
 
 plt.figure()
