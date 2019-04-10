@@ -19,8 +19,11 @@ with open(loc, newline= '') as csvfile:
         x.append(temp_x)
         y.append(temp_y)
         z.append(temp_z)
+        print(row)
 
 
+
+'''
 mpl.rcParams['legend.fontsize'] = 10
 
 fig = plt.figure()
@@ -29,3 +32,4 @@ ax.plot(x, y, z, label='3D Graph')
 ax.legend()
 
 plt.show()
+'''
