@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 import csv
 from scipy.interpolate import *
 
-
+'''
 xArr0 = []
 yArr0 = []
 zArr0 = []
@@ -21,12 +21,13 @@ zArr2 = []
 xArr3 = []
 yArr3 = []
 zArr3 = []
+'''
 
 #Get data from text file
-loc = ("/users/kevinvo/school programming/cosc 4364 numerical/3D Spline Data/sample.txt")
+loc = ("/users/kevinvo/school programming/cosc 4364 numerical/3D Spline Data/MRcolorData1.txt")
 
 readFile = open(loc, 'r')
-
+'''
 for line in readFile:
     currentLine = line.split(",")
     if(float(currentLine[0]) == 0):
@@ -49,15 +50,27 @@ for line in readFile:
         yArr3.append(float(currentLine[2]))
         zArr3.append(float(currentLine[3]))
         continue
+'''
 
+x = []
+y = []
+color = []
+
+for line in readFile:
+    currentLine = line.split(",")
+    if(float(currentLine[0]) == 5):
+        break
+    x.append(float(currentLine[1]))
+    y.append(float(currentLine[2]))
+    color.append(float(currentLine[3]))
 
 readFile.close()
 
-area = (30*np.random.rand(50))**2
-
+'''
 plt.scatter(xArr0, yArr0, c = zArr0)
 plt.scatter(xArr1, yArr1, c = zArr1)
 plt.scatter(xArr2, yArr2, c = zArr2)
 plt.scatter(xArr3, yArr3, c = zArr3)
-
+'''
+plt.scatter(x, y, c=color)
 plt.show()
