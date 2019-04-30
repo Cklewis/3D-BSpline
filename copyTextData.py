@@ -21,6 +21,5 @@ for line in readFile:
     writeFile.write(line)
     
 
-
 readFile.close()
 writeFile.close()

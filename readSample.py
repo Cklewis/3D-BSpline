@@ -1,9 +1,11 @@
-import matplotlib as mpl
+import matplotlib
 from mpl_toolkits.mplot3d import Axes3D
 import numpy as np
 import matplotlib.pyplot as plt
 import csv
 from scipy.interpolate import *
+import plotly
+import plotly.graph_objs as go
 
 '''
 xArr0 = []
@@ -58,7 +60,7 @@ color = []
 
 for line in readFile:
     currentLine = line.split(",")
-    if(float(currentLine[0]) == 5):
+    if(float(currentLine[0]) == 100):
         break
     x.append(float(currentLine[1]))
     y.append(float(currentLine[2]))
@@ -68,9 +70,17 @@ readFile.close()
 
 '''
 plt.scatter(xArr0, yArr0, c = zArr0)
+
 plt.scatter(xArr1, yArr1, c = zArr1)
+
 plt.scatter(xArr2, yArr2, c = zArr2)
+
 plt.scatter(xArr3, yArr3, c = zArr3)
 '''
+
+fig = plt.figure()
+
 plt.scatter(x, y, c=color)
+
 plt.show()
+#fig.savefig("/users/kevinvo/school programming/cosc 4364 numerical/3D Spline Data/plot.png")
