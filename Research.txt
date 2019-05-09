@@ -1,0 +1,10 @@
+Assuming that the plotting function is just plotting individual point on a graph. The interpolate function takes a set of point and calculate the coefficient for the interval.
+
+Interpolate Built-in Requirement:
+- The x-axis in the data must in in order
+- There cannot be duplicate x in the dataset.
+
+
+Solution:
+- Break the dataset into subset that follow the above requirement
+- 
